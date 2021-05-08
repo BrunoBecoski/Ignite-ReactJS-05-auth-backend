@@ -23,12 +23,34 @@ export default function Home() {
   }
  
   return (
-    <form onSubmit={handleSubmit} className={styles.container}>
-      <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-      <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+    <div className={styles.container}>
+      <h1>NEXT AUTH</h1>
+      <form onSubmit={handleSubmit} >
+        <label htmlFor="email">
+          E-mail
+          <input 
+            id="email" 
+            type="email" 
+            value={email} 
+            placeholder="diego@rocketseat.team"
+            onChange={e => setEmail(e.target.value)} 
+          />
+        </label>
 
-      <button type="submit">Entrar</button>
-    </form>
+        <label htmlFor="password">
+          Senha
+          <input 
+            id="password" 
+            type="password" 
+            value={password} 
+            placeholder="123456"
+            onChange={e => setPassword(e.target.value)} 
+          />
+        </label>
+
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
   )
 }
 
