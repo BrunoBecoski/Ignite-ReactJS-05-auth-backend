@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Omni Theme */
+:root {
+  --background: #191622;
+  --currentLine: #44475a;
+  --selection: #41414d;
+  --foreground: #e1e1e6;
+  --comment: #483c67;
+  --cyan: #78d1e1;
+  --green: #67e480;
+  --orange: #e89e64;
+  --pink: #ff79c6;
+  --purple: #988bc7;
+  --red: #e96379;
+  --yellow: #e7de79;
+}
+
+html {
+  background: var(--selection);
+  color: var(--foreground);
+}

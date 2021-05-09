@@ -3,7 +3,7 @@ import { FormEvent, useContext, useState } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 import { withSSRGuest } from '../utils/withSSRGuest';
 
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Login.module.css';
 
 export default function Home() {
   const [ email, setEmail ] = useState('');
@@ -26,6 +26,7 @@ export default function Home() {
     <div className={styles.container}>
       <h1>NEXT AUTH</h1>
       <form onSubmit={handleSubmit} >
+        <h2>Login</h2>
         <label htmlFor="email">
           E-mail
           <input 
