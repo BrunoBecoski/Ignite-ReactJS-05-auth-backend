@@ -1,4 +1,4 @@
-.header {  
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,8 +16,8 @@
 
 .header button {
   border: none;
-  font-size: 1rem;
   cursor: pointer;
+  font-size: 1rem;
   font-weight: bold;  
   padding: .5rem 2rem;
   border-radius: .25rem;
@@ -30,6 +30,7 @@
 
 .header button:hover {
   filter: brightness(.8);
+  
   color: white;
 }
 
@@ -38,13 +39,9 @@
   margin: 0 auto;
 }
 
-.main h1 {
-  margin: 5rem 0;
-}
-
 .main h2 {
-  margin: 2rem 0;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  margin: 5rem 0 2rem;
 }
 
 .main ul {
@@ -54,17 +51,4 @@
 .main li {
   padding: .25rem;
   text-transform: capitalize;  
-}
-
-.main a {
-  display: block;
-  margin-top: 5rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  
-  color: var(--foreground);
-}
-
-.main a:hover {
-  text-decoration: underline;
 }

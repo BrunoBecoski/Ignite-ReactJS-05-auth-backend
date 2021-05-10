@@ -17,29 +17,25 @@ export default function Dashboard() {
   },[]);
 
   return (
-    <div className={styles.container}>
-    <header>
-      <h1>NEXT AUTH</h1>
+    <div>
+      <header className={styles.header}>
+        <h1>NEXT AUTH</h1>
+        <h2>Dashboard</h2>
+        <button onClick={signOut}>Sign</button>
+      </header>
 
-      <h2>Dashboard</h2>
+      <main className={styles.main}>
+        <h1>E-mail: {user?.email}</h1>
 
-      <button onClick={signOut}>Sign</button>
-    </header>
-      <h1>E-mail: {user?.email}</h1>
+        <h2>Função</h2>
+        <ul>
+          {user?.roles.map(role => <li>{role}</li>)}
+        </ul>
 
-      <h3>Permissões</h3>
-      <ul>
-        {user?.permissions.map(permission => <li>{permission}</li>)}
-      </ul>
-
-      <h3>Funções</h3>
-      <ul>
-        {user?.roles.map(role => <li>{role}</li>)}
-      </ul>
-
-      <Can permissions={['metrics.list']}>
-        <div>Métricas</div>
-      </Can>
+        <Can permissions={['metrics.list']}>
+          <a href="/metrics">Métricas</a>
+        </Can>
+      </main>
     </div>
   )
 }
